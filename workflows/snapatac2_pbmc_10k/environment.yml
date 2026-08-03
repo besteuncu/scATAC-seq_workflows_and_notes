@@ -1,0 +1,35 @@
+name: scatac-py
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  # Python base
+  - python=3.11
+
+  # Numerical + data
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+
+  # Plotting
+  - matplotlib
+  - seaborn
+
+  # Interactive dev
+  - jupyterlab
+  - ipykernel
+  - notebook
+
+  # Single-cell stack
+  - scanpy
+  - anndata
+  - pyranges
+  - leidenalg
+  - python-igraph
+
+  # scATAC-specific
+  - pip
+  - pip:
+    - snapatac2
+    - muon
