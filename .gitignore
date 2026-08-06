@@ -18,9 +18,14 @@ data/
 # ============================================================
 .Rhistory
 .RData
+.RData*
+.RDataTmp
 .Ruserdata
 .Rproj.user/
 *.Rproj
+
+# scanpy default output folder
+figures/
 
 # ============================================================
 # renv paket kütüphanesi — sadece renv.lock tracked kalır
@@ -72,3 +77,4 @@ tmp/
 # Kişisel öğrenme notları — public repo'da görünmez
 # ============================================================
 notes/
+.Rproj.user
