@@ -1,20 +1,20 @@
 #!/usr/bin/env bash
-# Download the 10x Genomics PBMC 10k scATAC v1.0.1 dataset.
-# Usage: bash 00_download_data.sh
-# Expected total size: about 2 GB.
+# Download 10x Genomics ATACv2 PBMC 10k dataset (hg38, Cellranger-ATAC v2, 2022).
 
 set -euo pipefail
 
-DATA_DIR="data/atac_v1_pbmc_10k"
+# Resolve hub-level data dir (three levels up from workflow folder)
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+DATA_DIR="$SCRIPT_DIR/../../../data/pbmc_10k_atacv2"
 mkdir -p "$DATA_DIR"
 
-BASE="https://cf.10xgenomics.com/samples/cell-atac/1.0.1/atac_v1_pbmc_10k"
+BASE="https://cf.10xgenomics.com/samples/cell-atac/2.1.0/10k_pbmc_ATACv2_nextgem_Chromium_Controller"
 
 FILES=(
-  "atac_v1_pbmc_10k_fragments.tsv.gz"
-  "atac_v1_pbmc_10k_fragments.tsv.gz.tbi"
-  "atac_v1_pbmc_10k_filtered_peak_bc_matrix.h5"
-  "atac_v1_pbmc_10k_singlecell.csv"
+  "10k_pbmc_ATACv2_nextgem_Chromium_Controller_fragments.tsv.gz"
+  "10k_pbmc_ATACv2_nextgem_Chromium_Controller_fragments.tsv.gz.tbi"
+  "10k_pbmc_ATACv2_nextgem_Chromium_Controller_filtered_peak_bc_matrix.h5"
+  "10k_pbmc_ATACv2_nextgem_Chromium_Controller_singlecell.csv"
 )
 
 for f in "${FILES[@]}"; do
