@@ -57,3 +57,4 @@ notes/
 # Large data outputs
 *.h5mu
 *.h5ad
+*.rds
